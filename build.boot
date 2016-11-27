@@ -27,8 +27,10 @@
                   [com.stuartsierra/component "0.3.1"]
 
                   ;; client
-                  [reagent "0.6.0"]
-                  [cljs-ajax "0.5.8"]
+                  [org.omcljs/om "1.0.0-alpha47"]
+
+;                  [reagent "0.6.0"]
+;                  [cljs-ajax "0.5.8"]
                   ;[binaryage/devtools "0.8.2"]
                   ])
 
