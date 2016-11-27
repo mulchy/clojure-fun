@@ -2,7 +2,7 @@
   {:boot/export-tasks true}
   (:require [boot.core :as b]
             [reloaded.repl :refer [go]]
-            [server.main :refer [setup-app-for-reload!]]
+            [server.lifecycle.main :refer [setup-app-for-reload!]]
             [clojure.tools.namespace.repl :refer [disable-reload!]]))
 
 (disable-reload!)

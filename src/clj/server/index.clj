@@ -13,5 +13,4 @@
        (include-css "css/main.css")]
       [:body
        [:div.container [:div#app]]
-       [:h1 "goodbye world"]
        (include-js "js/main.js")])))

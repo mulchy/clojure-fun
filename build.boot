@@ -53,8 +53,8 @@
        :description "Trying to compile something"
        :license {"The MIT License (MIT)" "http://opensource.org/licenses/mit-license.php"} ;TODO
        }
-  aot {:namespace #{'server.main}}
-  jar {:main 'server.main}
+  aot {:namespace #{'server.lifecycle.main}}
+  jar {:main 'server.lifecycle.main}
   cljs {:source-map true}
   ;repl {:init-ns 'server.core}
   )
@@ -64,7 +64,7 @@
    (watch)
    (cljs-repl)
    (reload)
-   (cljs :optimizations :simple)
+   (cljs)
    (reload-app)))
 
 (deftask package

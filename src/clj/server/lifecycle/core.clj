@@ -1,4 +1,4 @@
-(ns server.core
+(ns server.lifecycle.core
   (:require [aleph.http :as http]
             [aleph.netty :as netty]
             [com.stuartsierra.component :as component]

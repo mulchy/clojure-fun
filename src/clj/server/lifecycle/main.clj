@@ -1,7 +1,7 @@
-(ns server.main
+(ns server.lifecycle.main
   (:require [com.stuartsierra.component :as component]
             [reloaded.repl :as reload]
-            [server.core :refer [server]])
+            [server.lifecycle.core :refer [server]])
   (:gen-class))
 
 (defn new-app
@@ -18,8 +18,11 @@
   []
   (reload/set-init! new-app))
 
-;;TODO does this need to call join or something?
 (defn -main
   "The production entry point"
   [& args]
-  (component/start (new-app)))
+  (.start (Thread. (fn []
+                     (component/start (new-app))
+                     ;; wait forever
+                     (.join (Thread/currentThread)))
+                   "main")))
